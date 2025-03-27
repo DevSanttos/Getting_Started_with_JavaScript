@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        // Tratamento de Strings
+        var nome = window.prompt(`Digite o seu nome:`)
+        document.write(`Olá, mundo! Seu nome é ${nome}<br>`)
+        document.write(`Seu nome em letras maiúsculas é ${nome.toUpperCase()}<br>`)
+        document.write(`Seu nome em letras minúsculas é ${nome.toLowerCase()}<br<`)
+
+        // Tratamento de numeros
+        var numero = Number(window.prompt(`Digite um número:`))
+        document.write(`Seu número é: ${numero}<br>`)
+
+        // Formatando as casas decimais de um number
+        document.write(`Seu número, com duas casas decimais é: ${numero.toFixed(2)}<br>`)
+        
+        // Formatando as casas decimais e reformulando o . do número para ,
+        document.write(`Seu número, com a vírgula ao invés do 
+        ponto, é: ${numero.toFixed(2).replace('.', ',')}<br>`)
+        
+        // Conversão monetária
+        document.write(`${numero.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} <br>`)
+        document.write(`${numero.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})} <br>`)
+        document.write(`${numero.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})} <br>`)
+    </script>
+</body>
+</html>
