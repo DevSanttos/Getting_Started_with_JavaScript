@@ -1,25 +1,39 @@
-document.getElementById("buttonEnvia").addEventListener("click", function(e) {
-    e.preventDefault();
+function calculaIMC() {
+    let peso = parseFloat(document.getElementById("pesoInput").value);
+    let altura = parseFloat(document.getElementById("alturaInput").value);
 
-    const peso = parseFloat(document.getElementById("pesoInput").value);
-    const altura = parseFloat(document.getElementById("alturaInput").value);
-    let imc = (peso/(altura**2));
-
-    let resultadoDiv = document.getElementById("resultado");
-    let mensagem = '';
-
-    if (imc >= 40) {
-        mensagem += '<p>Obesidade III</p>';
-    } else if (imc >= 35) {
-        mensagem += '<p>Obesidade II</p>';
-    } else if (imc >= 30) {
-        mensagem += '<p>Obesidade I</p>';
-    } else if (imc >= 25) {
-        mensagem += '<p>Sobrepeso</p>';
-    } else if (imc >= 18.5) {
-        mensagem += '<p>Normal</p>';
-    } else {
-        mensagem += '<p>Magreza</p>';
+    if (isNaN(peso) || isNaN(altura)) {
+        document.getElementById("resultado").textContent = "Por favor, insira valores numéricos válidos.";
+        return;
     }
-    resultadoDiv.innerHTML = mensagem;
-});
+
+    if (altura <= 0) {
+        document.getElementById("resultado").textContent = "Altura deve ser maior que zero.";
+        return;
+    }
+
+    if (peso <= 0) {
+        document.getElementById("resultado").textContent = "Peso deve ser maior que zero.";
+        return;
+    }
+
+    let resultado = peso / (altura * altura);
+    let classificacao = "";
+
+    if (resultado < 18.5) {
+        classificacao = "Magreza";
+    } else if (resultado < 24.9) {
+        classificacao = "Normal";
+    } else if (resultado < 29.9) {
+        classificacao = "Sobrepeso";
+    } else if (resultado < 34.9) {
+        classificacao = "Obesidade I";
+    } else if (resultado < 39.9) {
+        classificacao = "Obesidade II";
+    } else {
+        classificacao = "Obesidade III";
+    }
+
+    document.getElementById("resultado").textContent = 
+        "Seu IMC é: " + resultado.toFixed(2) + " - Classificação: " + classificacao;
+}

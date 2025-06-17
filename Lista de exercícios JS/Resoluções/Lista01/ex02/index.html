@@ -10,13 +10,10 @@
     <main>
         <h1>Bem vindo ao Calcula IMC</h1>
         <p>Insira os valores correspondentes para obter a sua classificação seguida do grau de obesidade</p>
-
-        <form id="formulario">
-            <input type="number" id="pesoInput" name="pesoInput" placeholder="Insira o seu peso">
-            <input type="number" id="alturaInput" name="alturaInput" placeholder="Insira a sua altura">
-            <button id="buttonEnvia" type="submit">Calcular</button>
-        </form>
-        <button id="resultado"></button>
+            <input type="number" id="pesoInput" name="pesoInput" placeholder="Insira o seu peso em Kg">
+            <input type="number" id="alturaInput" name="alturaInput" placeholder="Insira a sua altura em m">
+            <button id="buttonCalcular" type="submit" onclick="calculaIMC()">Calcular</button>
+        <p id="resultado"></p>
     </main>
     <script src="script.js"></script>
 </body>
