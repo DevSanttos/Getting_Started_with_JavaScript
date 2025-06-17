@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    display: block;
+    text-align: center;   
+}
+
+main h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+main h2 {
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+div {
+    margin-top: 10px;
+}
+
+div #valorInput {
+    padding: 5px;
+    height: 20px;
+    width: 200px;
+}
+
+div #enviaValorInput {
+    border-radius: 5px;
+    padding: 5px;
+    width: 100px;
+}

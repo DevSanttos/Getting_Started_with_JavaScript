@@ -4,13 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeiros passo com DOM</title>
+    <style>
+        body {
+            background-color: wheat;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
 </head>
 <body>
     <h1>DOM em JS</h1>
     <p>Aqui se inicia os meus estudos de DOM em JS</p>
-    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam quibusdam adipisci repellendus magnam</p>
+    <div id="teste">Clique aqui</div>
     <script>
-        
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write(`No primeiro parágrafo do nosso body stá escrito assim: ${p1.innerText}`)
+
+        var porId = document.getElementById('teste')
+        porId.style.padding = '20px' 
+        porId.innerText = "Carregando..."
+
+        porId.style.background = 'red'
+
+        var consta = window.document.getElementsByTagName('h1')[0]
+
+        consta.style.color = "pink"
+
+        var mudaCorFundo = window.document.body
+
+        mudaCorFundo.style.color = 'purple'
+
+        mudaCorFundo.style.background = 'white'
     </script>
 </body>
 </html>
