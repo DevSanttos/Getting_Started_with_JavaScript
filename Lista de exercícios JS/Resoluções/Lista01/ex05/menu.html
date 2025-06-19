@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Menu</title>
+</head>
+<body>
+    <main>
+        <h1>Aqui você pode realizar seu pedido</h1>
+        <p>Escolha as opções do menu abaixo:</p>
+        <fieldset>
+            <legend>Selecione o prato principal:</legend>
+
+            <label for="vegetariano">
+                <input type="checkbox" id="vegetariano" name="prato" value="Vegetariano">
+                Vegetariano
+            </label>
+
+            <label for="peixe">
+                <input type="checkbox" id="peixe" name="prato" value="Peixe">
+                Peixe
+            </label>
+            <label for="frango">
+                <input type="checkbox" id="frango" name="prato" value="Frango">
+                Frango
+            </label>
+
+            <label for="carne">
+                <input type="checkbox" id="carne" name="prato" value="Carne">
+                Carne
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Selecione a sobremesa:</legend>
+
+            <label for="abacaxi">
+                <input type="checkbox" id="abacaxi" name="sobremesa" value="Abacaxi">
+                Abacaxi
+            </label>
+            <label for="sorvete">
+                <input type="checkbox" id="sorvete" name="sobremesa" value="Sorvete diet">
+                Sorvete diet
+            </label>
+
+            <label for="mouse_diet">
+                <input type="checkbox" id="mouse_diet" name="sobremesa" value="Mouse diet">
+                Mouse diet
+            </label>
+
+            <label for="mouse_chocolate">
+                <input type="checkbox" id="mouse_chocolate" name="sobremesa" value="Mouse chocolate">
+                Mouse chocolate
+            </label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Selecione a bebida:</legend>
+
+            <label for="cha">
+                <input type="checkbox" id="cha" name="bebida" value="Chá">
+                Chá
+            </label>
+            <label for="suco_laranja">
+                <input type="checkbox" id="suco_laranja" name="bebida" value="Suco de laranja">
+                Suco de laranja
+            </label>
+
+            <label for="suco_melao">
+                <input type="checkbox" id="suco_melao" name="bebida" value="Suco de melão">
+                Suco de melão
+            </label>
+
+            <label for="refrigerante">
+                <input type="checkbox" id="refrigerante" name="bebida" value="Refrigerante diet">
+                Refrigerante diet
+            </label>
+        </fieldset>
+
+        <p>Clique no botão para calcular a quantidade de calorias do respectivo pedido</p>
+        <button onclick="calcularCalorias()">Calcular</button>
+        <p id="resultado"></p>
+
+        <p>Clique no botão abaixo para retornar à tela principal:</p>
+        <button onclick="window.location.href='principal.html'">Retornar</button>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
