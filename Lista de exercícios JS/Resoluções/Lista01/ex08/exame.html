@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exame</title>
+</head>
+<body onload="carregarMediaExame()">
+    <main>
+        <div class="container" id="containerExame">
+            <h1>Bem vindo ao exame</h1>
+            <p>Sua média foi de <span id="mediaPreExame"></span>!</p>
+            <button onclick="window.location.href='index.html'" id="botaoVoltar">Voltar</button>
+        </div>
+        <p>Parece que sua nota não foi suficiente para aprovação. Logo, você está convidado a realizar o exame. Informe a sua nota do exame:</p>
+        <input type="number" id="notaExame" min="0" max="10" step="0.1">
+        <button onclick="calcularResultadoExame()" id="botaoEnviar">Enviar</button>
+        <p id="resultadoExame"></p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
