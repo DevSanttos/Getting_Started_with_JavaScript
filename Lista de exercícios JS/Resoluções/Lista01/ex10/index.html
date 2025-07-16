@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ex10</title>
+</head>
+<body>
+    <main>
+        <h1>Exercício 10</h1>
+        <p>Realizar um programa que valida a quantidade, em Kg, de peixes, segundo o regulamento de pesca do Estado de Santa Catarina.</p>
+        <p>O regulamento diz que a quantidade máxima permitida é de 500 Kg, e que para cada Kg excedente deve ser paga uma multa de R$ 4,00.</p>
+
+        <label for="pesoPeixes">Peso dos peixes (Kg):</label>
+        <input type="number" id="pesoPeixes"/>
+        <br>
+
+        <button onclick="validarPeso()">Validar</button>
+        <p id="resultado"></p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

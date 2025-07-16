@@ -1,4 +1,4 @@
-* { 
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #beece1;
     color: #333;
     display: flex;
     justify-content: center;
@@ -40,11 +40,15 @@ p {
     color: #555;
 }
 
+label {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #333;
+}
 
-input[type="text"] {
+input[type = number] {
     width: 80%;
     padding: 10px;
-    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -58,11 +62,12 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+button:hover {  
     background-color: #218838;
 }
 
-#result {
+#resultado {
+    margin-top: 20px;
     font-size: 1.2em;
     color: #333;
     padding: 10px;
